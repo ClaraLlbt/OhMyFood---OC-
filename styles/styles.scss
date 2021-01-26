@@ -1,19 +1,21 @@
 
 body{ 
     font-family: 'Roboto:wght@100', sans-serif;
+    width: 70%;
+    margin: auto;
 }
-
 
 header{
     text-align: center;
+    margin-top: 20px;
     i{
+        color: black;
         position: relative;
         float: left;
-        top: 5px;
-        left: 20px;
-        font-size: 20px;}
-    img{
-        width: 50%;}}
+        top: 15px;
+        left: 120px;
+        font-size: 40px;}
+    }
 
 .loader {
     animation:spin 1s infinite linear;
@@ -72,6 +74,7 @@ header{
     .Explore{
         background-color: #F6F6F6;
         text-align: center;
+
     h2{
         font-weight: bold;
         margin: 45px 45px 10px 45px;}
@@ -80,66 +83,78 @@ header{
         color: #6c6c6c;}}
     .Search{
         background-color: #eaeaea;
+        box-shadow: inset 0px 4px 6px -2px silver;
+        padding: 7px 0px;
         i{
             position: relative;
-            right: -25px;}}   
+            right: -25px;
+            font-size: 17px;}}   
     input{
         width: auto;
         background-color: #eaeaea;
         text-align: center;
         border: none;
-        height: 50px;
+        height: 40px;
         font-size: 15px;
         font-weight: bold;}
     .btn_explore{
         background: linear-gradient(-5deg, #9356DC, #FF79DA);
-        padding: 12px 30px;
+        padding: 15px 20px;
         border-radius: 25px;
         border: none;
         color: white;
         box-shadow: 1px 3px 8px darkgray;
-        margin: 30px auto 50px auto;}
+        margin: 30px auto 50px auto;
+        font-weight: bold;
+        font-size: 14px;
+    }
         .btn_explore:hover{
             background:linear-gradient(-5deg, #9E6BDB, #FC8FDE);
             box-shadow: 1px 3px 8px grey;}
     }
     .Section_1_menu{
         background-color: #F2F2F2;
+        padding-bottom: 1px;
         .background-img{
             height: 300px;
-            background-position: center;
             background-size: cover;
+            background-position-x: center;
         }
         .menu1{
             background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-position-y: -210px;
         }
         .menu2{
             background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            background-position-y: -165px;
         }
         .menu3{
             background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            background-position-y: -250px;       
         }
         .menu4{
             background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            background-position-y: -275px;
         }
         .menu{
             background-color: #f2f2f2;
             border-top-left-radius: 45px;
             border-top-right-radius: 45px;
             position: relative;
-            top: -100px;
+            top: -50px;
             h2{
-                margin: 30px auto 20px 20px;
+                margin: 35px auto 20px 50px;
                 display: inline-flex;
                 font-family: 'shrikhand';
+                font-size: 50px;
             }
             .heart_action{
                 border: none;
                 float: right;
                 position: relative;
-                top: 25px;
-                right: 65px;
-                font-size: 30px;
+                top: 40px;
+                right: 95px;
+                font-size: 50px;
             }
             .hearticon{
                 position: absolute;
@@ -156,14 +171,21 @@ header{
             .heart_action:focus{
                 .full_heart, .empty_heart{
                     transition: all 1s ease-out;
-                    font-size: 25px;
+                    font-size: 50px;
                     background: -webkit-linear-gradient( #9356DC, #FF79DA);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
             .EPD{
-                margin: 5px 10px;
+                display: inline-grid;
+                margin: 0 15px;
+                p{
+                    margin-left: 10px;
+                    border-bottom: 2px #99E2D0 solid;
+                    width: 45px;
+                    padding-bottom: 5px;
+                }
                 .carte{
                     background-color: white;
                     display: flex;
@@ -182,24 +204,31 @@ header{
                         left: 0;
                         opacity: 0;
                     }
-                    h3{
-                        margin: 10px auto 0px 10px;
-                        font-size: 17px; 
-                    }
-                    p{
-                        margin: 5px auto 10px 10px;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        width: 90%;
-                        font-size: 15px;
+                    .Noms_EPD{
+                        width: 275px;
+                        height: 85px;
+                        h3{
+                            margin: 10px auto 0px 10px;
+                            font-size: 17px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{
+                            margin: 5px auto 5px 10px;
+                            font-size: 15px;
+                            border: none;
+                            width: 200px;
+                        }
                     }
                     .prix{
                         color: #353535;
                         position: absolute;
                         right: 20px;
-                        top: 35px;
+                        top: 55px;
                         font-size: 15px;
+                        width: 325px;
+                        text-align: right;
                     }
                     .icon_check {
                         position: absolute;
@@ -222,11 +251,37 @@ header{
 
                 .checkbox-input:checked + .Noms_EPD > .icon_check{
                     animation: arrive-par-la-droite 0.6s forwards;
+                } 
+                
+                .checkbox-input:checked + .Noms_EPD > h3, 
+                .checkbox-input:checked + .Noms_EPD > p{
+                    animation: all 0.5s;
+                    width: 175px;
                 }
-                .checkbox-input:checked + .Noms_EPD > .icon_check{
-                    animation: arrive-par-la-droite 0.6s forwards;
+                .checkbox-input:checked + .Noms_EPD > .prix{
+                    transition: all 0.5s ease-in;
+                    right: 65px;
+                }
+
+               
+               
+            }
+            .button_commander{
+                background: linear-gradient(-5deg, #9356DC, #FF79DA);
+                padding: 12px 50px;
+                border-radius: 25px;
+                border: none;
+                color: white;
+                -webkit-box-shadow: 1px 3px 8px darkgray;
+                box-shadow: 1px 3px 8px darkgray;
+                display: block;
+                margin: 40px auto 0px auto;
+                &:hover{
+                    background:linear-gradient(-5deg, #9E6BDB, #FC8FDE);
+                    box-shadow: 1px 3px 8px grey;
                 }
             }
+
             @keyframes arrive-par-la-droite {
                 0% {
                   right: -80px;}
@@ -236,75 +291,111 @@ header{
             @keyframes apparition {
                 0% {
                     opacity: 0;
-                  margin-top: -30px;}
+                    margin-top: -30px;
+                    margin-bottom: 10px;}
                 100% {
                     opacity: 1;
-                    margin-top: 30px;}}
+                    margin-top: 15px;
+                    margin-bottom: 10px;}}
+
+        
         }
-}
-
-
+    }
 
 .Section_2{
     background-color: #f6f6f6;
     padding-top: 1px;
     padding-bottom: 50px;
     h2{
-        margin: 50px auto auto 20px;}}
-.Fonction{
+        margin: 50px auto 10px 30px;}}
+.Fonctionnement{
     margin-bottom: 60px;
     h2{
         margin-left: 15px;
         margin-top: 40px;}
 }
+.Fonctions{
+    display: flex;
+    p{
+        font-weight: bold;
+    }
+}
 .choose, .compose, .taste{
     display: flex;
     text-align: center;
     background-color: #f6f6f6;
-    margin: 20px 20px;
+    margin: 20px auto;
     padding: 10px;
     border-radius: 25px;
     box-shadow: 1px 3px 10px #e7e7e7;
     font-weight: bold;
+    &:hover{
+        background-color: #f5edff;
+    }
     i{
         margin: auto 20px auto 5px;
-        color: gray;}
+        color: gray;
+    }
+    i.fa-mobile-alt{
+        font-size: 20px;
+    }
     i:hover{
         color: #9356dc;}}
 .Number1, .Number2, .Number3{
-    margin: auto 15px auto -20px;
+    margin: auto 15px auto -30px;
     background-color: #9356DC;
     color: white;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;}
+    width: 40px;
+    height: 30px;
+    padding-top: 7px;
+    font-size: 15px;
+    p{
+        position: relative;
+        top: -12px;
+        font-size: 14px;
+    }
+}
+
+.cartes_resto{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
 .restaurant{
+    margin: 10px auto;
     background-color: white;
-    margin: 20px;
+    width: 400px;
     border-radius: 15px;
+    box-shadow: 0px 2px 10px -2px silver;
     .Nouveau{
         background-color: #99e2d0;
         color: #1d987a;
-        padding: 10px 15px;
+        padding: 6px 12px;
         text-align: center;
         position: relative;
         float: right;
-        right: 10px;
-        top: 10px;}
+        right: 12px;
+        top: 12px;
+        border-radius: 2px;
+        font-size: 20px;
+        font-weight: bold;
+    }
 
     .background-img{
-        background-position: center;
+        background-position: bottom;
         background-size: cover;
-        height: 200px;
+        height: 300px;
         width: auto;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;}
     .background-img.square-img1{
         background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);}
     .background-img.square-img2{
-        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);}
-    .background-img.square-img3{
+        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        background-position-x: 0px;
+        background-position-y: -148px;}
+        .background-img.square-img3{
         background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);}
     .background-img.square-img4{
         background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);}
@@ -325,7 +416,7 @@ header{
         border: none;
         position: relative;
         float: right;
-        margin: 20px 50px;
+        margin: 20px 35px;
         font-size: 25px;}
         i{
             position: absolute;
@@ -349,16 +440,205 @@ header{
 footer{
     background-color: #353535;
     color: white;
-    div{
-        margin-left: 30px;
-        padding: 10px 0px 20px 0px;}
+    padding: 15px 0px;
     h2{
-        padding: 30px auto auto auto;
-        font-size: 20px;}
-    i{
-        display: block;
-        float: left;
-        width: 20px;
-        margin: auto 15px auto auto;}
-    p{ 
-        margin: 5px auto;}}
+        padding: 20px 80px 50px 80px;
+        font-family: shrikhand;
+        margin: auto;
+    }
+    .footer_paragraph{
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+        display: block ruby;
+        p{
+            margin: 0 40px;;
+        }
+        i{
+            margin-right: -35px;
+        }
+    }
+    .icon_paragraph{
+        display: block ruby;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+    
+
+@media all and (min-width: 320px) and (max-width: 667px){
+    body{
+        width: 100%;
+    }
+
+    header{
+        margin: 20px auto 10px auto;
+        i{
+            top: 5px;
+            left: 20px;
+            font-size: 20px;
+        }
+        img{
+            width: 50%;}
+    }
+
+    .Section_1{
+        width: 100%;
+        .Fonctions{
+            display: block;
+            .choose, .compose, .taste{
+                margin: 20px 30px;
+                .Number1, .Number2, .Number3{
+                    width: 15px;
+                    height: 15px;
+                    padding: 5px;
+                    margin-left: -20px;
+                    p{
+                        top: -13px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .Section_2{
+        width: 100%;
+        h2{
+            margin-left: 20px;
+        }
+        .restaurant{
+            width: 100%;
+            margin: 10px 20px;
+            .Nouveau{
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            .background-img{
+                height: 175px;
+            }
+        }
+    }
+
+    .Section_1_menu{
+        .background-img{
+            height: 300px;
+            background-position-x: 0px;
+            background-position-y: -2px;
+        }
+        .menu1{
+            background-size: contain;
+        }
+        .menu{
+            top: -100px;
+            h2{
+                font-size: 27px;
+                margin-left: 25px;
+            }
+            .heart_action{
+                top: 39px;
+                right: 45px;
+                font-size: 25px;
+            }
+            .heart_action:focus{
+                .full_heart, .empty_heart{
+                    font-size: 25px;
+                }
+            }
+            .EPD{
+                display: block;
+                .carte{
+                    .Noms_EPD{
+                        height: 65px;
+                    
+                    p{
+                    width: 275px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    }
+                }
+                .prix{
+                    top: 35px;
+                }
+                }
+            }
+            .button_commander{
+                margin: 40px auto -40px auto;
+            }
+        }
+    }
+
+    footer{
+        padding: 0px 0px 20px 0px;
+        h2{
+            padding: 20px 20px 5px 20px;
+            font-size: 20px;
+        }
+        .footer_paragraph{
+            margin-left: 20px;
+            font-size: 15px;
+            display: block;
+            text-align: initial;
+            width: auto;
+            p{
+                margin: 5px 0px;
+            }
+        }
+            .icon_paragraph{
+                i{
+                    position: initial;
+                    font-size: 11px;
+                    width: 10px;
+                    margin-right: 5px;
+                    text-align: center;
+                }
+                
+            }
+        
+    }
+}
+
+@media all and (min-width: 668px) and (max-width: 1024px){
+    body{
+        width: 100%;
+    }
+    header{
+        margin: 20px auto 10px auto;
+        i{
+            top: 22px;
+            left: 95px;
+            font-size: 40px;
+        }
+    }
+    .Section_1{
+        width: 100%;
+    }
+    .Section_2{
+        width: 100%;
+        h2{
+            margin: 25px 20px;
+        }
+    }
+
+
+    .restaurant{
+        width: 350px;
+        .background-img{
+            height: 250px;
+        }
+    }
+    .Section_1_menu{
+        .menu{
+            h2{
+            font-size: 45px;
+            margin-left: 40px;
+            }
+            .button_commander{
+                margin-top: 60px;
+                font-size: 15px;
+            }
+        }
+    }
+}
