@@ -15,7 +15,7 @@ header i {
   float: left;
   top: 15px;
   left: 120px;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .loader {
@@ -165,12 +165,16 @@ header i {
 .Section_1_menu {
   background-color: #F2F2F2;
   padding-bottom: 1px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .Section_1_menu .background-img {
-  height: 300px;
+  height: 310px;
   background-size: cover;
   background-position-x: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .Section_1_menu .menu1 {
@@ -341,6 +345,11 @@ header i {
           animation: arrive-par-la-droite 0.6s forwards;
 }
 
+.Section_1_menu .menu .EPD .checkbox-input:checked + .Noms_EPD > .icon_check > .checkicon {
+  -webkit-animation: icon_rotate 0.7s forwards;
+          animation: icon_rotate 0.7s forwards;
+}
+
 .Section_1_menu .menu .EPD .checkbox-input:checked + .Noms_EPD > h3,
 .Section_1_menu .menu .EPD .checkbox-input:checked + .Noms_EPD > p {
   -webkit-animation: all 0.5s;
@@ -351,7 +360,7 @@ header i {
 .Section_1_menu .menu .EPD .checkbox-input:checked + .Noms_EPD > .prix {
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
-  right: 65px;
+  right: 75px;
 }
 
 .Section_1_menu .menu .button_commander {
@@ -370,6 +379,24 @@ header i {
   background: linear-gradient(-5deg, #9E6BDB, #FC8FDE);
   -webkit-box-shadow: 1px 3px 8px grey;
           box-shadow: 1px 3px 8px grey;
+}
+
+@-webkit-keyframes icon_rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes icon_rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 
 @-webkit-keyframes arrive-par-la-droite {
@@ -502,7 +529,7 @@ header i {
 }
 
 .restaurant {
-  margin: 10px auto;
+  margin: 20px auto;
   background-color: white;
   width: 400px;
   border-radius: 15px;
@@ -689,12 +716,27 @@ footer a {
     height: 175px;
   }
   .Section_1_menu .background-img {
-    height: 300px;
-    background-position-x: 0px;
-    background-position-y: -2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    height: 310px;
+    background-size: cover;
   }
   .Section_1_menu .menu1 {
     background-size: contain;
+    background-position-x: 0px;
+    background-position-y: -2px;
+  }
+  .Section_1_menu .menu2 {
+    background-position-y: -105px;
+  }
+  .Section_1_menu .menu3 {
+    background-size: contain;
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  .Section_1_menu .menu4 {
+    background-position-x: -16px;
+    background-position-y: -40px;
   }
   .Section_1_menu .menu {
     top: -100px;
@@ -777,7 +819,7 @@ footer a {
     margin: 25px 20px;
   }
   .restaurant {
-    width: 350px;
+    margin: 30px auto;
   }
   .restaurant .background-img {
     height: 250px;
