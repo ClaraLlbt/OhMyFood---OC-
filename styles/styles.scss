@@ -17,11 +17,10 @@ header{
         font-size: 35px;}
     }
 
-.loader {
-    animation:spin 1s infinite linear;
+.spinner {    
+    animation:spin 2s infinite linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
     border:solid 2vmin transparent;
     border-radius:50%;
     border-right-color:#9356DC;
@@ -34,8 +33,7 @@ header{
     width:20vmin;
     z-index:1;
     &:before {
-        animation-iteration-count: 1;
-        animation:spin 1s infinite linear;
+        animation:spin 3s infinite linear;
         border:solid 2vmin transparent;
         border-radius:50%;
         border-right-color:#FF79DA;
@@ -48,7 +46,7 @@ header{
         top:0;
         width:16vmin;}
         &:after {
-            animation:spin 1s infinte linear;
+            animation:spin 1s infinite linear;
             border:solid 2vmin transparent;
             border-radius:50%;
             border-right-color:#FF79DA;
@@ -69,6 +67,7 @@ header{
         opacity: 1;}
     100% {
       opacity: 0;}}
+
 
 .Section_1{
     .Explore{
@@ -458,24 +457,29 @@ footer{
     color: white;
     padding: 15px 0px;
     h2{
-        padding: 20px 80px 50px 80px;
+        padding: 20px 80px 50px 45px;
         font-family: shrikhand;
         margin: auto;
     }
-    .footer_paragraph{
-        padding-bottom: 10px;
-        width: 100%;
-        text-align: center;
-        display: block ruby;
+    .content_footer{
+        display: flex;
+        width: 90%;
+        margin: 0 15px;
+        .footer_paragraph{
+            margin: auto;
+        }
         p{
-            margin: 0 40px;;
+            margin: 0 auto;;
         }
         i{
-            margin-right: -35px;
+            padding-right: 10px;
+            padding-left: 30px;
+            position: relative;
+            top: 0;
         }
     }
     .icon_paragraph{
-        display: block ruby;
+        display: flex;
     }
     a{
         text-decoration: none;
@@ -607,7 +611,7 @@ footer{
             padding: 20px 20px 5px 20px;
             font-size: 20px;
         }
-        .footer_paragraph{
+        .content_footer{
             margin-left: 20px;
             font-size: 15px;
             display: block;
@@ -618,11 +622,13 @@ footer{
             }
         }
             .icon_paragraph{
+                display: flex;
                 i{
-                    position: initial;
+                    position: relative;
+                    top: 7px;
                     font-size: 11px;
                     width: 10px;
-                    margin-right: 5px;
+                    padding-left: 0px;
                     text-align: center;
                 }
                 

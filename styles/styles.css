@@ -18,15 +18,13 @@ header i {
   font-size: 35px;
 }
 
-.loader {
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+.spinner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #9356DC;
@@ -41,11 +39,9 @@ header i {
   z-index: 1;
 }
 
-.loader:before {
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+.spinner:before {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #FF79DA;
@@ -60,9 +56,9 @@ header i {
   width: 16vmin;
 }
 
-.loader:after {
-  -webkit-animation: spin 1s infinte linear;
-          animation: spin 1s infinte linear;
+.spinner:after {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
   border: solid 2vmin transparent;
   border-radius: 50%;
   border-right-color: #FF79DA;
@@ -635,28 +631,38 @@ footer {
 }
 
 footer h2 {
-  padding: 20px 80px 50px 80px;
+  padding: 20px 80px 50px 45px;
   font-family: shrikhand;
   margin: auto;
 }
 
-footer .footer_paragraph {
-  padding-bottom: 10px;
-  width: 100%;
-  text-align: center;
-  display: block ruby;
+footer .content_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 15px;
 }
 
-footer .footer_paragraph p {
-  margin: 0 40px;
+footer .content_footer .footer_paragraph {
+  margin: auto;
 }
 
-footer .footer_paragraph i {
-  margin-right: -35px;
+footer .content_footer p {
+  margin: 0 auto;
+}
+
+footer .content_footer i {
+  padding-right: 10px;
+  padding-left: 30px;
+  position: relative;
+  top: 0;
 }
 
 footer .icon_paragraph {
-  display: block ruby;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer a {
@@ -778,21 +784,27 @@ footer a {
     padding: 20px 20px 5px 20px;
     font-size: 20px;
   }
-  footer .footer_paragraph {
+  footer .content_footer {
     margin-left: 20px;
     font-size: 15px;
     display: block;
     text-align: initial;
     width: auto;
   }
-  footer .footer_paragraph p {
+  footer .content_footer p {
     margin: 5px 0px;
   }
+  footer .icon_paragraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   footer .icon_paragraph i {
-    position: initial;
+    position: relative;
+    top: 7px;
     font-size: 11px;
     width: 10px;
-    margin-right: 5px;
+    padding-left: 0px;
     text-align: center;
   }
 }
